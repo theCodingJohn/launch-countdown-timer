@@ -1,12 +1,22 @@
 .home {
-  position: relative;
+  @include flex($flow: column, $justify: center);
   height: 100vh;
-  background: $dark-blue url(/src/assets/images/bg-stars.svg) no-repeat center;
-  &::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: url(/src/assets/images/pattern-hills.svg) no-repeat bottom;
+  background: url(/src/assets/images/pattern-hills.svg) no-repeat bottom right;
+
+  h1 {
+    align-self: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    text-indent: 0.4rem;
+    font-weight: 600;
+  }
+
+  .social-container {
+    margin-top: auto;
+  }
+
+  .social-link {
+    margin: 1.1rem;
   }
 }
