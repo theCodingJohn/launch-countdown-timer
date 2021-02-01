@@ -63,7 +63,6 @@ body {
   color: #fb6087;
   border-radius: 10px;
   background: #343650;
-  overflow: hidden;
 }
 
 @media screen and (min-width: 900px) {
@@ -85,10 +84,21 @@ body {
   background: rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 50%;
+  border-radius: 10px 10px 0 0;
 }
 
 .card h2 {
   font-size: 1.65em;
+}
+
+.card--name {
+  position: absolute;
+  bottom: -38%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.38em;
+  color: #8486a9;
+  letter-spacing: 0.3em;
 }
 
 @media screen and (min-width: 900px) {

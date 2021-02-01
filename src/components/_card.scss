@@ -15,7 +15,7 @@
   color: $soft-red;
   border-radius: 10px;
   background: $dark-saturated-blue;
-  overflow: hidden;
+  // overflow-y: hidden;
 
   .flipping-half {
     display: block;
@@ -24,10 +24,21 @@
     background: rgba($color: #000, $alpha: 0.2);
     width: 100%;
     height: 50%;
+    border-radius: 10px 10px 0 0;
   }
 
   h2 {
     font-size: 1.65em;
+  }
+
+  &--name {
+    position: absolute;
+    bottom: -38%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.38em;
+    color: $grayish-blue;
+    letter-spacing: 0.3em;
   }
 }
 
