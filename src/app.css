@@ -77,6 +77,33 @@ body {
   }
 }
 
+.card__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card__bg::after, .card__bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0.3em;
+  height: 0.3em;
+  border-radius: 100%;
+  background: #191a24;
+}
+
+.card__bg::after {
+  left: -0.15em;
+}
+
+.card__bg::before {
+  right: -0.15em;
+}
+
 .card .flipping-half {
   display: block;
   position: absolute;
@@ -91,14 +118,16 @@ body {
   font-size: 1.65em;
 }
 
-.card--name {
+.card__name {
   position: absolute;
   bottom: -38%;
   text-align: center;
   text-transform: uppercase;
   font-size: 0.38em;
+  font-weight: 700;
   color: #8486a9;
   letter-spacing: 0.3em;
+  text-indent: 0.3em;
 }
 
 @media screen and (min-width: 900px) {
