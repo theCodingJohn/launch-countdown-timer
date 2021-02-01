@@ -15,7 +15,34 @@
   color: $soft-red;
   border-radius: 10px;
   background: $dark-saturated-blue;
-  // overflow-y: hidden;
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 0.3em;
+      height: 0.3em;
+      border-radius: 100%;
+      background: $very-dark-blue;
+    }
+
+    &::after {
+      left: -0.15em;
+    }
+
+    &::before {
+      right: -0.15em;
+    }
+  }
 
   .flipping-half {
     display: block;
@@ -31,14 +58,16 @@
     font-size: 1.65em;
   }
 
-  &--name {
+  &__name {
     position: absolute;
     bottom: -38%;
     text-align: center;
     text-transform: uppercase;
     font-size: 0.38em;
+    font-weight: 700;
     color: $grayish-blue;
     letter-spacing: 0.3em;
+    text-indent: 0.3em;
   }
 }
 
