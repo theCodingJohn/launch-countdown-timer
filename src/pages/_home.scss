@@ -23,6 +23,12 @@
   }
 
   .social-link {
+    cursor: pointer;
     margin: 1.1rem;
+
+    &:hover path {
+      fill: $soft-red !important;
+      transition: fill 300ms;
+    }
   }
 }
