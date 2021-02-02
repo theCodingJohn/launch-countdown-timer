@@ -1,5 +1,7 @@
 # Frontend Mentor - Launch countdown timer
 
+![website gif preview](./md_assets/tothemoon.gif)
+
 ![Design preview for the Launch countdown timer coding challenge](./md_assets/desktop-preview.jpg)
 
 ## Welcome! 👋
