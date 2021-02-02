@@ -21,10 +21,10 @@ const Home = () => {
 
   // Subract the current date to the launch date
   const getDuration = () => {
-    let dayLength = launchDay - day;
-    let hourLength = launchHour < hour && (parseInt(launchHour - hour) + 24) || launchHour - hour;
-    let minuteLength = launchMinute < minute && (launchMinute - minute) + 60  || launchMinute - minute;
-    let secondLength = launchSecond < second && (launchSecond - second) + 60 || launchSecond - second; 
+    const dayLength = launchDay - day;
+    const hourLength = (launchHour < hour && (parseInt(launchHour - hour) + 24)) || launchHour - hour;
+    const minuteLength = (launchMinute < minute && (launchMinute - minute) + 60)  || launchMinute - minute;
+    const secondLength = (launchSecond < second && (launchSecond - second) + 60) || launchSecond - second; 
     return [dayLength, hourLength, minuteLength, secondLength];
   }
 
