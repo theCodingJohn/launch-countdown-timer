@@ -6,6 +6,11 @@ import Card from "../components/Card"
 const Home = () => { 
   const [date, setDate] = useState(new Date());
 
+  // change date value every second
+  useEffect(() => {
+    const interval = setInterval(() => setDate(new Date()), 1000)
+  }, [])
+
   // Get current date
   const [, month, day, year, time] = date.toString().split(" ");
   const [hour, minute, second] = time.split(":") 
@@ -24,10 +29,6 @@ const Home = () => {
   }
 
   const [dayLength, hourLength, minuteLength, secondLength] = getDuration();
-
-  useEffect(() => {
-    setDate(new Date());
-  }, [date])
   
   return (
     <main className="home container">
