@@ -6,6 +6,11 @@ import Card from "../components/Card"
 const Home = () => { 
   const [date, setDate] = useState(new Date());
 
+  // change date value every second
+  useEffect(() => {
+    const interval = setInterval(() => setDate(new Date()), 1000)
+  }, [])
+
   // Get current date
   const [, month, day, year, time] = date.toString().split(" ");
   const [hour, minute, second] = time.split(":") 
@@ -16,18 +21,14 @@ const Home = () => {
 
   // Subract the current date to the launch date
   const getDuration = () => {
-    let dayLength = launchDay - day;
-    let hourLength = launchHour < hour && (parseInt(launchHour - hour) + 24) || launchHour - hour;
-    let minuteLength = launchMinute < minute && (launchMinute - minute) + 60  || launchMinute - minute;
-    let secondLength = launchSecond < second && (launchSecond - second) + 60 || launchSecond - second; 
+    const dayLength = launchDay - day;
+    const hourLength = (launchHour < hour && (parseInt(launchHour - hour) + 24)) || launchHour - hour;
+    const minuteLength = (launchMinute < minute && (launchMinute - minute) + 60)  || launchMinute - minute;
+    const secondLength = (launchSecond < second && (launchSecond - second) + 60) || launchSecond - second; 
     return [dayLength, hourLength, minuteLength, secondLength];
   }
 
   const [dayLength, hourLength, minuteLength, secondLength] = getDuration();
-
-  useEffect(() => {
-    setDate(new Date());
-  }, [date])
   
   return (
     <main className="home container">
