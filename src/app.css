@@ -188,6 +188,13 @@ body {
 }
 
 .home .social-link {
+  cursor: pointer;
   margin: 1.1rem;
+}
+
+.home .social-link:hover path {
+  fill: #fb6087 !important;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
 }
 /*# sourceMappingURL=app.css.map */
